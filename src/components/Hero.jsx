@@ -126,7 +126,7 @@ const Hero = () => {
         className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white"
       >
         <div
-          className="relative bg-gradient-to-br from-white/30 to-blue-200/30 backdrop-blur-xl rounded-3xl p-8 md:p-12 max-w-3xl w-full border border-white/20 shadow-2xl"
+          className="relative bg-gradient-to-br from-white/30 to-blue-200/30 dark:from-gray-800/30 dark:to-blue-900/30 backdrop-blur-xl rounded-3xl p-8 md:p-12 max-w-3xl w-full border border-white/20 dark:border-gray-700/20 shadow-2xl"
           style={{
             background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(59, 130, 246, 0.2))',
           }}
@@ -143,7 +143,7 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
             whileHover="hover"
-            className="relative w-full max-w-md mx-auto bg-gradient-to-r from-white/20 to-blue-200/20 backdrop-blur-md rounded-full border border-white/30 shadow-lg"
+            className="relative w-full max-w-md mx-auto bg-gradient-to-r from-white/20 to-blue-200/20 dark:from-gray-800/20 dark:to-blue-900/20 backdrop-blur-md rounded-full border border-white/30 dark:border-gray-700/30 shadow-lg"
             data-focus="false"
           >
             <input
@@ -154,14 +154,15 @@ const Hero = () => {
               onChange={(e) => handleSearch(e.target.value)}
               onFocus={(e) => e.target.parentElement.setAttribute('data-focus', 'true')}
               onBlur={(e) => e.target.parentElement.removeAttribute('data-focus')}
-              className="w-full pl-10 pr-12 py-3 rounded-full bg-transparent text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-300"
+              className="w-full pl-10 pr-12 py-3 rounded-full bg-transparent text-white dark:text-gray-200 placeholder-white/70 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-300"
             />
-            <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/80" />
+            <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/80 dark:text-gray-400" />
             <motion.button
+              layout
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={toggleVoiceSearch}
-              className={`absolute right-3 top-1/2 transform -translate-y-1/2 p-1 rounded-full ${isListening ? 'text-blue-400' : 'text-white/80'}`}
+              className={`absolute right-3 top-[0.50rem] w-8 h-8 flex items-center justify-center rounded-full ${isListening ? 'text-blue-400' : 'text-white/80 dark:text-gray-400'}`}
             >
               <FaMicrophone className="w-5 h-5" />
             </motion.button>
@@ -170,8 +171,8 @@ const Hero = () => {
                 variants={suggestionVariants}
                 initial="hidden"
                 animate="visible"
-                className="absolute top-14 left-0 right-0 mx-auto w-full max-w-md bg-gradient-to-br from-white/20 to-blue-200/20 backdrop-blur-md rounded-xl border border-white/30 shadow-lg z-50"
-              >
+                className="absolute top-14 left-0 right-0 mx-auto w-full max-w-md bg-gradient-to-br from-white/20 to-blue-200/20 dark:from-gray-800/20 dark:to-blue-900/20 backdrop-blur-md rounded-xl border border-white/30 dark:border-gray-700/30 shadow-lg z-50"
+>
                 <div className="relative p-2">
                   <div className="absolute inset-0 rounded-xl animate-pulse-glow" />
                   {suggestions.map((business) => (
@@ -179,11 +180,11 @@ const Hero = () => {
                       key={business.id}
                       whileHover={{ scale: 1.02, backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
                       transition={{ type: 'spring', stiffness: 300 }}
-                      className="p-2 cursor-pointer text-white drop-shadow-sm hover:text-blue-400"
-                      onClick={() => handleSuggestionClick(business.id)}
-                    >
+                      className="p-2 cursor-pointer text-white drop-shadow-sm hover:text-blue-400 dark:text-gray-200 dark:hover:text-blue-300"
+                          onClick={() => handleSuggestionClick(business.id)}
+                        >
                       <span className="font-semibold">{business.name}</span>
-                      <span className="block text-sm text-white/80">
+                      <span className="block text-sm text-white/80 dark:text-gray-400">
                         {business.category} - {typeof business.location === 'string' ? business.location : business.location?.city}
                       </span>
                     </motion.div>

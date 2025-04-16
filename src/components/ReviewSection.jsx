@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaStar, FaCheck } from 'react-icons/fa'; // Added FaCheck for the submit icon
+import { FaStar, FaCheck } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const ReviewSection = ({ reviews }) => {
@@ -25,38 +25,38 @@ const ReviewSection = ({ reviews }) => {
 
   return (
     <motion.div
-      className="mt-8 bg-gradient-to-br from-white/10 to-blue-200/10 md:backdrop-blur-sm backdrop-blur-none rounded-xl p-6 border border-white/30 shadow-md relative overflow-hidden"
+      className="mt-8 bg-gradient-to-br from-white/10 to-blue-200/10 dark:from-gray-800/10 dark:to-blue-900/10 md:backdrop-blur-sm backdrop-blur-none rounded-xl p-6 border border-white/30 dark:border-gray-700/30 shadow-md relative overflow-hidden"
       initial="hidden"
       animate="visible"
       variants={formVariants}
     >
       <div className="absolute inset-0 rounded-xl animate-pulse-glow z-0" />
       <div className="relative z-10">
-        <h3 className="text-xl font-semibold mb-4 text-blue-400 drop-shadow-md">Reviews</h3>
+        <h3 className="text-xl font-semibold mb-4 text-blue-400 drop-shadow-md dark:text-blue-300">Reviews</h3>
         <div className="space-y-4 mb-6">
           {submittedReviews.map((review, index) => (
             <motion.div
               key={index}
-              className="border-b border-white/20 pb-3"
+              className="border-b border-white/20 dark:border-gray-700/20 pb-3"
               variants={reviewVariants}
               initial="hidden"
               animate="visible"
               transition={{ delay: index * 0.1 }}
             >
               <div className="flex items-center">
-                <span className="font-semibold text-blue-400 drop-shadow-sm">{review.user}</span>
+                <span className="font-semibold text-blue-400 drop-shadow-sm dark:text-blue-300">{review.user}</span>
                 <div className="ml-2 flex">
                   {[...Array(5)].map((_, i) => (
                     <FaStar
                       key={i}
                       className={`${
-                        i < review.rating ? 'text-blue-400' : 'text-white/50'
+                        i < review.rating ? 'text-blue-400 dark:text-blue-300' : 'text-white/50 dark:text-gray-500'
                       } w-4 h-4`}
                     />
                   ))}
                 </div>
               </div>
-              <p className="text-blue-400 drop-shadow-sm">{review.comment}</p>
+              <p className="text-blue-400 drop-shadow-sm dark:text-blue-300">{review.comment}</p>
             </motion.div>
           ))}
         </div>
@@ -68,20 +68,20 @@ const ReviewSection = ({ reviews }) => {
           animate="visible"
         >
           <div>
-            <label className="block text-sm font-medium text-blue-400 drop-shadow-sm mb-1">
+            <label className="block text-sm font-medium text-blue-400 drop-shadow-sm mb-1 dark:text-blue-300">
               Your Name
             </label>
             <input
               type="text"
               value={newReview.user}
               onChange={(e) => setNewReview({ ...newReview, user: e.target.value })}
-              className="w-full border border-white/30 rounded-lg p-2 bg-white/10 text-blue-400 placeholder-blue-400/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+              className="w-full border border-white/30 dark:border-gray-700/30 rounded-lg p-2 bg-white/10 dark:bg-gray-800/10 text-blue-400 dark:text-blue-300 placeholder-blue-400/50 dark:placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
               required
               placeholder="Enter your name"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-blue-400 drop-shadow-sm mb-1">
+            <label className="block text-sm font-medium text-blue-400 drop-shadow-sm mb-1 dark:text-blue-300">
               Rating
             </label>
             <div className="flex">
@@ -93,7 +93,7 @@ const ReviewSection = ({ reviews }) => {
                 >
                   <FaStar
                     className={`cursor-pointer ${
-                      i < newReview.rating ? 'text-blue-400' : 'text-white/50'
+                      i < newReview.rating ? 'text-blue-400 dark:text-blue-300' : 'text-white/50 dark:text-gray-500'
                     } w-6 h-6`}
                     onClick={() => setNewReview({ ...newReview, rating: i + 1 })}
                   />
@@ -102,13 +102,13 @@ const ReviewSection = ({ reviews }) => {
             </div>
           </div>
           <div>
-            <label className="block text-sm font-medium text-blue-400 drop-shadow-sm mb-1">
+            <label className="block text-sm font-medium text-blue-400 drop-shadow-sm mb-1 dark:text-blue-300">
               Comment
             </label>
             <textarea
               value={newReview.comment}
               onChange={(e) => setNewReview({ ...newReview, comment: e.target.value })}
-              className="w-full border border-white/30 rounded-lg p-2 bg-white/10 text-blue-400 placeholder-blue-400/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+              className="w-full border border-white/30 dark:border-gray-700/30 rounded-lg p-2 bg-white/10 dark:bg-gray-800/10 text-blue-400 dark:text-blue-300 placeholder-blue-400/50 dark:placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
               required
               placeholder="Share your thoughts..."
               rows="4"
@@ -118,9 +118,9 @@ const ReviewSection = ({ reviews }) => {
             whileHover={{ scale: 1.05, boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }}
             whileTap={{ scale: 0.95 }}
             type="submit"
-            className="bg-gradient-to-r from-white/20 to-blue-200/20 md:backdrop-blur-sm backdrop-blur-none text-white p-3 rounded-full shadow-md border border-white/30 drop-shadow-md transition-transform float-end"
+            className="bg-gradient-to-r from-white/20 to-blue-200/20 dark:from-gray-800/20 dark:to-blue-900/20 md:backdrop-blur-sm backdrop-blur-none text-white dark:text-gray-200 p-3 rounded-full shadow-md border border-white/30 dark:border-gray-700/30 drop-shadow-md transition-transform float-end"
           >
-            <FaCheck className="w-5 h-5  text-blue-400" />
+            <FaCheck className="w-5 h-5 text-blue-400 dark:text-blue-300" />
           </motion.button>
         </motion.form>
       </div>
