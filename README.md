@@ -119,4 +119,4 @@ Inspired by the frosty aesthetics of winter landscapes and modern UI trends.
 
 **Frost Business Directory** - Find local businesses with a touch of frost and magic!
 
-**Connect with me on [LinkedIn](https://www.linkedin.com/in/akkshay-paatil/)
+**Connect with me on** [LinkedIn](https://www.linkedin.com/in/akkshay-paatil/)
