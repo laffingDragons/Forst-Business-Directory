@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Forst-Business-Directory/static/css/main.69ba9d5c.css",
-    "main.js": "/Forst-Business-Directory/static/js/main.8d02cbcc.js",
+    "main.js": "/Forst-Business-Directory/static/js/main.536d7314.js",
     "static/js/453.7676e3d6.chunk.js": "/Forst-Business-Directory/static/js/453.7676e3d6.chunk.js",
     "static/media/background.png": "/Forst-Business-Directory/static/media/background.80a7d27f83d9abf4db82.png",
     "static/media/Snowy-Road.webp": "/Forst-Business-Directory/static/media/Snowy-Road.a72ec7b275d3a2e95e6b.webp",
@@ -11,11 +11,11 @@
     "static/media/slick.woff": "/Forst-Business-Directory/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Forst-Business-Directory/index.html",
     "main.69ba9d5c.css.map": "/Forst-Business-Directory/static/css/main.69ba9d5c.css.map",
-    "main.8d02cbcc.js.map": "/Forst-Business-Directory/static/js/main.8d02cbcc.js.map",
+    "main.536d7314.js.map": "/Forst-Business-Directory/static/js/main.536d7314.js.map",
     "453.7676e3d6.chunk.js.map": "/Forst-Business-Directory/static/js/453.7676e3d6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.69ba9d5c.css",
-    "static/js/main.8d02cbcc.js"
+    "static/js/main.536d7314.js"
   ]
 }
