@@ -1,7 +1,8 @@
 
 # ❄️ Frost Business Directory
 
-![Frost Business Directory Banner](https://via.placeholder.com/1200x600.png?text=Frost+Business+Directory) <!-- Replace with an actual banner image -->
+![Frost Business Directory Banner]<img width="1495" alt="image" src="https://github.com/user-attachments/assets/33356540-7cde-4f6b-b26d-d33428140bbe" />
+
 
 Welcome to the **Frost Business Directory**, a sleek and modern web application designed to help users discover local businesses with ease. Built for a hackathon, this project combines a frosty glass UI aesthetic, voice search functionality, and a seamless dark mode experience to create an intuitive and visually stunning directory.
 
@@ -79,9 +80,10 @@ To deploy your own instance on GitHub Pages:
 
 ## Screenshots
 Home Page (Light Mode)
-![Home Page Light](#) <!-- Replace with actual screenshot -->
+![Home Page Light](<img width="1500" alt="image" src="https://github.com/user-attachments/assets/fba77504-8a2f-4609-95d0-a8a5718fe3f3" />)
+
 Business Profile (Dark Mode)
-![Business Profile Dark](#) <!-- Replace with actual screenshot -->
+![Business Profile Dark](<img width="1491" alt="image" src="https://github.com/user-attachments/assets/d65e9650-054d-40f7-882a-a4dcecf2c926" />) 
 
 ## Why This Project Stands Out for Hackathons
 - **Innovative UI/UX**: The frosty glass aesthetic combined with smooth animations creates a unique and memorable user experience.
@@ -116,3 +118,5 @@ Thanks to xAI for providing Grok, which assisted in debugging and optimizing thi
 Inspired by the frosty aesthetics of winter landscapes and modern UI trends.
 
 **Frost Business Directory** - Find local businesses with a touch of frost and magic!
+
+**Connect with me on [LinkedIn](https://www.linkedin.com/in/akkshay-paatil/)
