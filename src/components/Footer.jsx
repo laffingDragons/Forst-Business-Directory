@@ -24,10 +24,10 @@ const Footer = () => {
           Business Directory
         </motion.div>
         <div className="flex space-x-4">
-          <a href="#" className="hover:text-blue-400 drop-shadow-lg">
+          <a href="https://www.linkedin.com/in/akkshay-paatil/" className="hover:text-blue-400 drop-shadow-lg">
             Terms
           </a>
-          <a href="#" className="hover:text-blue-400 drop-shadow-lg">
+          <a href="https://www.linkedin.com/in/akkshay-paatil/" className="hover:text-blue-400 drop-shadow-lg">
             Privacy
           </a>
           <a href="https://www.linkedin.com/in/akkshay-paatil/" className="hover:text-blue-400 drop-shadow-lg">
