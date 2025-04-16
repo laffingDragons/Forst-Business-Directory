@@ -1,7 +1,7 @@
 {
   "name": "business-directory",
   "version": "0.1.0",
-  "homepage": "https://laffingdragons.github.io/forst-business-directory",
+  "homepage": "https://laffingdragons.github.io/Forst-Business-Directory",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
